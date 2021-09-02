@@ -12,7 +12,7 @@ local WATCHED_EVENTS = {
 
 --- Default values of the database.
 local DATABASE_DEFAULTS = {
-  ShowEnemiesInWorld      = GetCVar(ENEMY_PLATES_CVAR),
+  ShowEnemiesInWorld      = 1,
   ShowEnemiesInSanctuary  = 0,
 }
 
@@ -33,8 +33,6 @@ local function UpdateVisibility()
   else
     SetCVar(ENEMY_PLATES_CVAR, PeacefulSanctuary.db.profile.ShowEnemiesInWorld)
   end
-
-  print(ENEMY_PLATES_CVAR, GetCVar(ENEMY_PLATES_CVAR))
 end
 
 --- Called when one of the registered events is fired.
@@ -64,7 +62,7 @@ end
 --- Initialize the Peaceful Sanctuary addon.
 function PeacefulSanctuary:OnInitialize()
   -- Use a global profile.
-  self.db = LibStub("AceDB-3.0"):New("MyAddonDB", { profile = DATABASE_DEFAULTS }, true)
+  self.db = LibStub("AceDB-3.0"):New("PeacefulSanctuaryDB", { profile = DATABASE_DEFAULTS }, true)
 
   -- Register events.
   self.DummyFrame = CreateFrame("Frame", "PeacefulSanctuaryDummyFrame", UIParent)

@@ -1,10 +1,10 @@
 ## Interface: 20502
 
-## Title: |cFFFFFFFFPeaceful Sanctuary|r |cFF00FF00v1.0.0|r
+## Title: |cFFFFFFFFPeaceful Sanctuary|r |cFF00FF00v1.0.1|r
 ## Author: Dommy
 ## SavedVariables: PeacefulSanctuaryDB
 ## Notes: Hides enemy nameplates while in a sanctuary.
-## Version: 1.0.0
+## Version: 1.0.1
 ## OptionalDeps: Ace3
 ## X-Website: https://github.com/domino54/PeacefulSanctuary
 ## X-Localizations: enUS
